@@ -1,0 +1,16 @@
+<html lang={{ lang }}>
+<title> {{ title }} </title>
+
+<body>
+<h1> {{ title }} </h1>
+<p> {{ description }} </p>
+<form action="/submit.php" method="post" target="submit_iframe"> {% csrf_token %}
+<label for="email">Email Address:</label> <input type="text" id="email" name="email"><br>
+<input type="checkbox" id="tos" name="tos" value="tos"> <label for="tos"> {{ tos }} </label><br>
+<br>
+<input type="submit" id="submit" value="Submit"/>
+</form>
+<iframe name="submit_iframe" title="submit_iframe" style="display:none"></iframe> 
+</body>
+
+</html>
